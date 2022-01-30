@@ -155,7 +155,21 @@ namespace CocosTool
                 progressBar1.Value = i + 1;
                 num_change += ReplaceFile(lst_files[i], select_sprites);
             }
-            MessageBox.Show(num_change+"개의 스프라이트를 변경했습니다.");
+            MessageBox.Show(LitJsonGet.String(Common.language["ChangeAtlasUUID"][8]).Replace("@1@", num_change.ToString()));
+        }
+
+        private void Form_ChangeAtlasUUID_Load(object sender, EventArgs e)
+        {
+            JsonData lng = Common.language["ChangeAtlasUUID"];
+            int cur = 0;
+            btn_change.Text = LitJsonGet.String(lng[cur++]);
+            textBox2.Text = LitJsonGet.String(lng[cur++]);
+            textBox1.Text = LitJsonGet.String(lng[cur++]);
+            textBox3.Text = LitJsonGet.String(lng[cur++]);
+            btn_search.Text = LitJsonGet.String(lng[cur++]);
+            btn_clear.Text = LitJsonGet.String(lng[cur++]);
+            btn_check.Text = LitJsonGet.String(lng[cur++]);
+            this.Text = LitJsonGet.String(lng[cur++]);
         }
     }
 }

@@ -56,7 +56,7 @@ namespace CocosTool
                         JsonData comp = prefab[idx_component];
                         if (((string)comp["__type__"]).Equals("cc.ParticleSystem3D")) is_particle_3d = true;
                     }
-                    if (is_particle_3d) name_node = name_node + " <---------------- Particle 3D";
+                    if (is_particle_3d) name_node = name_node + LitJsonGet.String(Common.language["Particle3dFinder"][1]);
                     if (parent == null) tree = treeView1.Nodes.Add(name_node);
                     else tree = parent.Nodes.Add(name_node);
                     CocosProcess.SearchNInsertNode(ref prefab, ref lst_search, idx, tree);
@@ -73,7 +73,7 @@ namespace CocosTool
 
         private void Form_Particle3dFinder_Load(object sender, EventArgs e)
         {
-
+            this.Text = LitJsonGet.String(Common.language["Particle3dFinder"][0]);
         }
     }
 }

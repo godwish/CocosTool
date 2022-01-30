@@ -171,6 +171,7 @@ namespace CocosTool
             this.Name = "Form_Atlas";
             this.ShowIcon = false;
             this.Text = "아틀라스 속 리소스 검색";
+            this.Load += new System.EventHandler(this.Form_Atlas_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

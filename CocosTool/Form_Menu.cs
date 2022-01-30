@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LitJson;
 
 namespace CocosTool
 {
@@ -31,6 +32,24 @@ namespace CocosTool
         private void btn_change_sprite_Click(object sender, EventArgs e)
         {
             //new Form_SwitchAtlasUUID().Show();
+        }
+
+        private void Form_Menu_Load(object sender, EventArgs e)
+        {
+            JsonData lng = Common.language["Menu"];
+            int cur = 0;
+            btn_search_multy.Text = LitJsonGet.String(lng[cur++]);
+            btn_atlas.Text = LitJsonGet.String(lng[cur++]);
+            btn_text.Text = LitJsonGet.String(lng[cur++]);
+            btn_find_p3d.Text = LitJsonGet.String(lng[cur++]);
+            groupBox1.Text = LitJsonGet.String(lng[cur++]);
+            groupBox2.Text = LitJsonGet.String(lng[cur++]);
+            btn_switch_atlas_uuid.Text = LitJsonGet.String(lng[cur++]);
+            btn_change_sprites.Text = LitJsonGet.String(lng[cur++]);
+            groupBox3.Text = LitJsonGet.String(lng[cur++]);
+            btn_change_sprite_prefab.Text = LitJsonGet.String(lng[cur++]);
+            btn_change_sprite.Text = LitJsonGet.String(lng[cur++]);
+            this.Text = LitJsonGet.String(lng[cur++]);
         }
     }
 }

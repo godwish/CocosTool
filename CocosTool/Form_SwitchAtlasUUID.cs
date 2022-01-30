@@ -65,6 +65,17 @@ namespace CocosTool
 
         private void tb_atlas_1_TextChanged(object sender, EventArgs e){ }
 
+        private void Form_SwitchAtlasUUID_Load(object sender, EventArgs e)
+        {
+            JsonData lng = Common.language["SwitchAtlasUUID"];
+            int cur = 0;
+            textBox1.Text = LitJsonGet.String(lng[cur++]);
+            textBox2.Text = LitJsonGet.String(lng[cur++]);
+            btn_switch.Text = LitJsonGet.String(lng[cur++]);
+            this.Text = LitJsonGet.String(lng[cur++]);
+
+        }
+
         private void btn_switch_Click(object sender, EventArgs e)
         {
             if (str_1 == null || str_2 == null) return;
@@ -101,9 +112,9 @@ namespace CocosTool
             foreach (var key in sub_1.Keys) sub_1[key]["rawTextureUuid"] = tid_2;
             foreach (var key in sub_2.Keys) sub_2[key]["rawTextureUuid"] = tid_1;
 
-                Util.SaveTextString(tb_atlas_1.Text,jd_1.ToJson());
+            Util.SaveTextString(tb_atlas_1.Text,jd_1.ToJson());
             Util.SaveTextString(tb_atlas_2.Text, jd_2.ToJson());
-            MessageBox.Show(num_switch+"개의 스프라이트가 교체되었습니다.");
+            MessageBox.Show(LitJsonGet.String(Common.language["SwitchAtlasUUID"][4]).Replace("@1@", num_switch.ToString()));
         }
     }
 }

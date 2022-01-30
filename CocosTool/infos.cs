@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LitJson;
+
 
 // 자료형들을 여기에 정의 하도록 하자
-
 public class info_node
 {
     public string name;
@@ -43,5 +44,14 @@ public class info_uuid_sprite
     {
         uuid_texture = null;
         uuid_sprite = null;
+    }
+}
+public static class Common
+{
+    public static JsonData language;
+    public static void LoadLanguage()
+    {
+        string str_data = Util.LoadTextString("language.json");
+        language = LitJsonGet.Get(str_data);
     }
 }

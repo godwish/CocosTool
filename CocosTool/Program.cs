@@ -14,6 +14,7 @@ namespace CocosTool
         [STAThread]
         static void Main()
         {
+            Common.LoadLanguage();
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

@@ -110,5 +110,17 @@ namespace CocosTool
             frm.Init(file_name, dic_name[lb_search.SelectedItem.ToString()], uuid_atlas);
             frm.Show();
         }
+
+        private void Form_Atlas_Load(object sender, EventArgs e)
+        {
+            JsonData lng = Common.language["Atlas"];
+            int cur = 0;
+            textBox4.Text = LitJsonGet.String(lng[cur++]);
+            textBox2.Text = LitJsonGet.String(lng[cur++]);
+            btn_start.Text = LitJsonGet.String(lng[cur++]);
+            btn_reset.Text = LitJsonGet.String(lng[cur++]);
+            textBox1.Text = LitJsonGet.String(lng[cur++]);
+            this.Text = LitJsonGet.String(lng[cur++]);
+        }
     }
 }

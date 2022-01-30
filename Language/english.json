@@ -1,0 +1,65 @@
+{
+    "Atlas" : [
+        "Folder to search (asset)",
+        "Dependable files",
+        "Search start",
+        "Reset searching",
+        "Atlas",
+        "Searching for resources in Atlas"
+    ],
+    "ChangeAtlasUUID":[
+        "The sprites set to UUID of Atlas 1 and changed to UUID of Atlas 2",
+        "Atlas 2",
+        "Atlas 1",
+        "Target folder",
+        "Sprite search for the same name of two Atlas",
+        "Uncheck all",
+        "Check All",
+        "Changes the selection of sprites",
+        "@1@ sprites have been changed."
+    ],
+    "Menu":[
+        "Search with files.",
+        "Search Atlas",
+        "Search Strings",
+        "Search Particle3D",
+        "Search UUID",
+        "Solve Problem",
+        "Changing UUIDs in Atlas",
+        "Changes the sprites",
+        "Solve Atlas Problem",
+        "Changing Select Sprite(Prefab)",
+        "[X] Change a specific sprite",
+        "CocosCreator Tool"
+    ],
+    "Particle3dFinder":[
+        "Particle3d Finder",
+        " <---------------- Particle 3D"
+    ], 
+    "SwitchAtlasUUID":[
+        "Atlas 1",
+        "Atlas 2",
+        "UUID switch between Atla",
+        "Changing UUIDs in Atlas",
+        "@1@ sprites have been replaced."
+    ],
+    "UUID":[
+        "Please enter the uuids.",
+        "Folder to search (asset)",
+        "Dependable files",
+        "Start Search",
+        "Reset Search",
+        "Search with UUID"
+    ],
+    "Viewer":[
+        "Scene,Prefab Viewer"
+    ],
+    "FilesSearch":[
+        "Reset Search",
+        "Start Search",
+        "Dependable files",
+        "Folder to search (asset)",
+        "Files to search",
+        "Search Files"
+    ]
+}

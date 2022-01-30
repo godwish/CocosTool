@@ -163,6 +163,7 @@ namespace CocosTool
             this.Name = "Form1";
             this.ShowIcon = false;
             this.Text = "여러 파일 검색";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

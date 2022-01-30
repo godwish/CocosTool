@@ -38,8 +38,8 @@ namespace CocosTool
             this.btn_switch_atlas_uuid = new System.Windows.Forms.Button();
             this.btn_change_sprites = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btn_change_sprite = new System.Windows.Forms.Button();
             this.btn_change_sprite_prefab = new System.Windows.Forms.Button();
+            this.btn_change_sprite = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -92,7 +92,7 @@ namespace CocosTool
             this.groupBox1.Controls.Add(this.btn_text);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(195, 173);
+            this.groupBox1.Size = new System.Drawing.Size(195, 140);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "UUID 검색";
@@ -102,7 +102,7 @@ namespace CocosTool
             this.groupBox2.Controls.Add(this.btn_find_p3d);
             this.groupBox2.Location = new System.Drawing.Point(213, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(195, 173);
+            this.groupBox2.Size = new System.Drawing.Size(195, 140);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "문제 해결";
@@ -135,20 +135,10 @@ namespace CocosTool
             this.groupBox3.Controls.Add(this.btn_switch_atlas_uuid);
             this.groupBox3.Location = new System.Drawing.Point(414, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(199, 173);
+            this.groupBox3.Size = new System.Drawing.Size(199, 140);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "아틀라스 문제해결";
-            // 
-            // btn_change_sprite
-            // 
-            this.btn_change_sprite.Location = new System.Drawing.Point(6, 109);
-            this.btn_change_sprite.Name = "btn_change_sprite";
-            this.btn_change_sprite.Size = new System.Drawing.Size(180, 23);
-            this.btn_change_sprite.TabIndex = 7;
-            this.btn_change_sprite.Text = "[X]특정 스프라이트 변경(전체)";
-            this.btn_change_sprite.UseVisualStyleBackColor = true;
-            this.btn_change_sprite.Click += new System.EventHandler(this.btn_change_sprite_Click);
             // 
             // btn_change_sprite_prefab
             // 
@@ -158,18 +148,34 @@ namespace CocosTool
             this.btn_change_sprite_prefab.TabIndex = 8;
             this.btn_change_sprite_prefab.Text = "스프라이트 선택 변경(프리팹)";
             this.btn_change_sprite_prefab.UseVisualStyleBackColor = true;
+            this.btn_change_sprite_prefab.Visible = false;
+            // 
+            // btn_change_sprite
+            // 
+            this.btn_change_sprite.Location = new System.Drawing.Point(6, 109);
+            this.btn_change_sprite.Name = "btn_change_sprite";
+            this.btn_change_sprite.Size = new System.Drawing.Size(180, 23);
+            this.btn_change_sprite.TabIndex = 7;
+            this.btn_change_sprite.Text = "[X]특정 스프라이트 변경(전체)";
+            this.btn_change_sprite.UseVisualStyleBackColor = true;
+            this.btn_change_sprite.Visible = false;
+            this.btn_change_sprite.Click += new System.EventHandler(this.btn_change_sprite_Click);
             // 
             // Form_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(626, 197);
+            this.ClientSize = new System.Drawing.Size(626, 164);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form_Menu";
             this.ShowIcon = false;
             this.Text = "CocosCreator Tool";
+            this.Load += new System.EventHandler(this.Form_Menu_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);

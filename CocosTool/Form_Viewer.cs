@@ -206,6 +206,8 @@ namespace CocosTool
 
         private void treeView1_DragDrop(object sender, DragEventArgs e){}
         private void treeView1_DragEnter(object sender, DragEventArgs e){}
-        private void Form_Viewer_Load(object sender, EventArgs e){}
+        private void Form_Viewer_Load(object sender, EventArgs e){
+            this.Text = LitJsonGet.String(Common.language["Viewer"][0]);
+        }
     }
 }

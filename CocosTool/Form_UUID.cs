@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LitJson;
 
 namespace CocosTool
 {
@@ -74,6 +75,18 @@ namespace CocosTool
 
             frm.Init(file_name,ref lst_uuid);
             frm.Show();
+        }
+
+        private void Form_UUID_Load(object sender, EventArgs e)
+        {
+            JsonData lng = Common.language["UUID"];
+            int cur = 0;
+            textBox5.Text = LitJsonGet.String(lng[cur++]);
+            textBox4.Text = LitJsonGet.String(lng[cur++]);
+            textBox2.Text = LitJsonGet.String(lng[cur++]);
+            btn_start.Text = LitJsonGet.String(lng[cur++]);
+            btn_reset.Text = LitJsonGet.String(lng[cur++]);
+            this.Text = LitJsonGet.String(lng[cur++]);
         }
     }
 }

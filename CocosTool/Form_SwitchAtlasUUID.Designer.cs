@@ -111,6 +111,7 @@ namespace CocosTool
             this.Name = "Form_SwitchAtlasUUID";
             this.ShowIcon = false;
             this.Text = "아틀라스간 UUID 교체";
+            this.Load += new System.EventHandler(this.Form_SwitchAtlasUUID_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

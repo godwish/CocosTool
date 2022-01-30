@@ -197,6 +197,7 @@ namespace CocosTool
             this.Name = "Form_ChangeAtlasUUID";
             this.ShowIcon = false;
             this.Text = "스프라이트 선택 변경(전체)";
+            this.Load += new System.EventHandler(this.Form_ChangeAtlasUUID_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
