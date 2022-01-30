@@ -5,6 +5,7 @@
 ![GitHub](https://img.shields.io/github/license/godwish/CocosTool)
 <br>
 Environment : <b>Visual Studio 2019, Dotnet5</b>
-Package : Litjson
+<br>
+Package : <b>Litjson</b>
 <br>
 <br>
