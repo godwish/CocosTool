@@ -113,10 +113,13 @@ namespace CocosTool
         {
             for (int i = 0; i < clb_list.Items.Count; ++i) clb_list.SetItemChecked(i, true);
         }
+
+        // UUID 변경
         int ReplaceFile(string name,in List<string> lst)
         {
             int ret = 0;
             JsonData arr = LitJsonGet.Get(Util.LoadTextString(name));
+
             for(int i = 0; i < arr.Count; ++i)
             {
                 JsonData one = arr[i];
@@ -133,6 +136,7 @@ namespace CocosTool
             if (ret > 0) Util.SaveTextString(name, arr.ToJson());
             return ret;
         }
+
         private void btn_change_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(tb_target.Text)) return;
@@ -155,7 +159,9 @@ namespace CocosTool
                 progressBar1.Value = i + 1;
                 num_change += ReplaceFile(lst_files[i], select_sprites);
             }
-            MessageBox.Show(LitJsonGet.String(Common.language["ChangeAtlasUUID"][8]).Replace("@1@", num_change.ToString()));
+
+            LitJson.JsonData changeInfo = Common.language["ChangeAtlasUUID"];
+            MessageBox.Show(LitJsonGet.String(changeInfo[changeInfo.Count - 1]).Replace("@1@", num_change.ToString()));
         }
 
         private void Form_ChangeAtlasUUID_Load(object sender, EventArgs e)
